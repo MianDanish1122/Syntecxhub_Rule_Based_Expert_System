@@ -1,0 +1,12 @@
+[2026-01-13 18:22:17] User: hi
+[2026-01-13 18:22:17] Bot: Hi there!
+
+[2026-01-13 18:22:42] User: whats your name ?
+[2026-01-13 18:22:42] Bot: I'm sorry, I don't understand that. Can you rephrase?
+
+[2026-01-13 18:24:28] User: hi
+[2026-01-13 18:24:28] Bot: Hello! How can I help you today?
+
+[2026-01-13 18:24:47] User: how are you
+[2026-01-13 18:24:47] Bot: I'm doing well, thanks! How about you?
+

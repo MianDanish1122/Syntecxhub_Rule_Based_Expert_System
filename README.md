@@ -58,9 +58,118 @@ Step 2: Rule 'Pneumonia Risk' fired
 - `ExpertSystem` class: Manages facts, rules, and inference process
 - Forward chaining algorithm: Applies rules iteratively until no new conclusions
 
+---
+
+# Simple Rule-Based Chatbot
+
+A conversational bot using pattern matching to handle intents and provide responses.
+
+## Features
+
+- **Intent Recognition**: Supports greeting, help, small talk, and goodbye intents
+- **Pattern Matching**: Uses regex for flexible input matching
+- **Knowledge Base**: Answers domain-specific questions about AI, Python, etc.
+- **Interactive Console**: Real-time conversation via command line
+- **Conversation Logging**: Saves all interactions to `conversation_log.txt`
+
+## Usage
+
+Run the chatbot:
+
+```bash
+python 02_task_simple_rule_based_chatbot.py
+```
+
+Start chatting! The bot recognizes:
+- Greetings: "hello", "hi", "hey"
+- Help requests: "help", "what can you do"
+- Small talk: "how are you", "tell me a joke"
+- Knowledge questions: "what is python", "what is ai"
+- Goodbye: "bye", "exit"
+
+## Example Interaction
+
+```
+Chatbot: Hello! I'm a simple rule-based chatbot. Type 'exit' to quit.
+You: hello
+Chatbot: Hi there!
+You: what is python
+Chatbot: Python is a high-level programming language known for its simplicity and readability.
+You: tell me a joke
+Chatbot: Why did the computer go to the doctor? Because it had a virus!
+You: bye
+Chatbot: Goodbye! Have a great day!
+```
+
+## Architecture
+
+- `intents` dict: Maps intents to patterns and responses
+- `knowledge_base` dict: Q&A pairs for domain knowledge
+- Pattern matching with regex for intent detection
+- Random response selection for variety
+- File logging with timestamps
+
+---
+
+# Sentiment Analysis Tool
+
+A machine learning tool for analyzing sentiment in text using TF-IDF features and Logistic Regression.
+
+## Features
+
+- **Text Preprocessing**: Cleans, tokenizes, and removes stopwords from text
+- **Feature Extraction**: Converts text to numeric features using TF-IDF vectorization
+- **Model Training**: Trains Logistic Regression classifier on labeled data
+- **Evaluation**: Reports accuracy and F1-score on test data
+- **Interactive CLI**: Allows real-time sentiment prediction for user input
+- **Model Persistence**: Saves trained model for future use
+
+## Usage
+
+Run the sentiment analysis tool:
+
+```bash
+python 02_task_project_02_sentiment _analysis _tool.py
+```
+
+The tool will:
+1. Train the model on sample data
+2. Display evaluation metrics
+3. Enter interactive mode for sentiment analysis
+
+Enter text when prompted, or type 'quit' to exit.
+
+## Example Output
+
+```
+Training sentiment analysis model...
+Model Evaluation:
+Accuracy: 0.80
+F1 Score: 0.67
+Model trained and saved.
+
+Sentiment Analysis Tool
+Enter text to analyze sentiment (type 'quit' to exit):
+Text: I love this product!
+Predicted sentiment: positive
+
+Text: This is terrible.
+Predicted sentiment: negative
+```
+
+## Architecture
+
+- Sample dataset of positive/negative reviews
+- NLTK for text preprocessing (tokenization, stopwords)
+- Scikit-learn for TF-IDF vectorization and Logistic Regression
+- Model saved as pickle file for reuse
+- Command-line interface for predictions
+
 ## Requirements
 
 - Python 3.x
+- scikit-learn
+- nltk
 
 ## License
 
