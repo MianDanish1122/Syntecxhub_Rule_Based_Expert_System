@@ -174,3 +174,42 @@ Predicted sentiment: negative
 ## License
 
 MIT License
+
+---
+
+# Hand Gesture Recognition Demo
+
+This script uses MediaPipe to detect hand landmarks in real-time from a webcam feed and classifies simple gestures: thumbs up, fist, and open palm. Each gesture is mapped to an action for demonstration purposes.
+
+## Gestures and Actions
+- **Thumbs Up**: Increase Volume
+- **Fist**: Play/Pause
+- **Open Palm**: Decrease Volume
+- **Unknown**: No Action
+
+## Requirements
+- Python 3.7+
+- Webcam
+- opencv-python
+- mediapipe
+
+## Installation
+1. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## Usage
+Run the script:
+```
+python 03_task_hand_gesture_recognition.py
+```
+
+- A window will open showing the webcam feed with hand landmarks drawn.
+- The detected gesture and corresponding action will be displayed on the screen.
+- Press 'q' to quit.
+
+## Troubleshooting
+- If the webcam doesn't open, ensure it's not in use by another application.
+- For better detection, ensure good lighting and keep your hand in view.
+- If gestures are not detected accurately, adjust the `min_detection_confidence` parameter in the code.
